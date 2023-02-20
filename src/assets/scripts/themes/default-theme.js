@@ -143,7 +143,7 @@ export default {
 
         codespan: {
             "font-size": `90%`,
-            color: `#d14`,
+            color: `#888`,
             background: `rgba(27,31,35,.05)`,
             padding: `3px 5px`,
             "border-radius": `4px`,
@@ -166,7 +166,7 @@ export default {
 
         // 字体加粗样式
         strong: {
-            color: `rgba(15, 76, 129, 0.9)`,
+            color: `#888`,
             "font-weight": `bold`,
         },
 
@@ -200,4 +200,4 @@ export default {
             "font-size": `0.8em`,
         },
     },
-}
+};

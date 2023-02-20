@@ -124,7 +124,6 @@ class WxRenderer {
             };
             renderer.code = (text, lang) => {
                 lang = hljs.getLanguage(lang) ? lang : "plaintext";
-
                 text = hljs.highlight(text, { language: lang }).value;
 
                 // =================================================================处理变量  <span class="hljs-variable">T2</span>
@@ -151,6 +150,7 @@ class WxRenderer {
                         text = text.replaceAll(newVariable, resultVariable);
                     });
                 }
+                // =================================================================处理变量  <span class="hljs-variable">T2</span>
                 // =================================================================处理多行注释
                 const commentRegex =
                     // 后缀 g 全局 s 多行模式
@@ -175,9 +175,7 @@ class WxRenderer {
                         text = text.replace(comment, newComment);
                     });
                 }
-                // =================================================================
-                // =================================================================处理</code><code> 符合微信公众号样式
-
+                // =================================================================处理多行注释
                 text = text
                     .replace(/\r\n/g, "</code><code>")
                     .replace(/\n/g, "</code><code>")
@@ -185,7 +183,9 @@ class WxRenderer {
                         return str.replace(/\s/g, "&nbsp;");
                     });
 
+                // =================================================================处理</code><code> 符合微信公众号 行号样式
                 return `<pre class="code-snippet__js hljs code__pre"><code class="prettyprint language-${lang}">${text}</code></pre>`;
+                // =================================================================处理</code><code> 符合微信公众号 行号样式
             };
             renderer.codespan = (text, lang) =>
                 `<code ${getStyles("codespan")}>${text}</code>`;
@@ -216,28 +216,31 @@ class WxRenderer {
                 let imgStyles = getStyles("image");
                 return `<figure ${figureStyles}><img ${imgStyles} src="${href}" title="${title}" alt="${text}"/>${subText}</figure>`;
             };
-            //     renderer.link = (href, title, text) => {
-            //         if (href.startsWith("http")) {
-            //             return `<a href="${href}" title="${title || text}" ${getStyles(
+            // renderer.link = (href, title, text) => {
+            //     if (href.startsWith("https://mp.weixin.qq.com")) {
+            //         return `<a href="${href}" title="${title || text}" ${getStyles(
             //     "wx_link"
             //   )}>${text}</a>`;
-            //         }
-            //         if (href === text) {
-            //             return text;
-            //         }
-            //         if (status) {
-            //             let ref = addFootnote(title || text, href);
-            //             return `<span ${getStyles("link")}>${text}<sup>[${ref}]</sup></span>`;
-            //         }
-            //         return `<span ${getStyles("link")}>${text}</span>`;
-            //     };
+            //     }
+            //     if (href === text) {
+            //         return text;
+            //     }
+            //     if (status) {
+            //         let ref = addFootnote(title || text, href);
+            //         return `<span ${getStyles("link")}>${text}<sup>[${ref}]</sup></span>`;
+            //     }
+            //     return `<span ${getStyles("link")}>${text}</span>`;
+            // };
+
             //
-            // 修改链接显示方式
+            // =================================================================修改链接显示方式
+            // 由于微信公众号好里面不允许外链，外链不能用 a 标签 转换为文本加样式 连接需要单独写出来。
             renderer.link = (href) => {
                 if (href.startsWith("http")) {
                     return `<span class="hljs-link">${href}</span>`;
                 }
             };
+            // =================================================================修改链接显示方式
             renderer.strong = (text) =>
                 `<strong ${getStyles("strong")}>${text}</strong>`;
             renderer.em = (text) =>
