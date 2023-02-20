@@ -1,16 +1,15 @@
 diff --git a/node_modules/highlight.js/dax.xlsx b/node_modules/highlight.js/dax.xlsx
 new file mode 100644
-index 0000000..960ed00
-Binary files /dev/null and b/node_modules/highlight.js/dax.xlsx differ
+index 0000000..e69de29
 diff --git a/node_modules/highlight.js/es/languages/dax.js b/node_modules/highlight.js/es/languages/dax.js
 new file mode 100644
-index 0000000..45ea61d
+index 0000000..0a90745
 --- /dev/null
 +++ b/node_modules/highlight.js/es/languages/dax.js
 @@ -0,0 +1,697 @@
 +function dax(hljs) {
 +    const regex = hljs.regex;
-+    const COMMENT_MODE = hljs.COMMENT('//', '/*');
++    const COMMENT_MODE = hljs.COMMENT('//', '$');
 +    const STRING = {
 +        className: 'string',
 +        variants: [{
@@ -750,13 +749,13 @@ index 5da9ad4..5a8e45a 100644
  hljs.registerLanguage('step21', require('./languages/step21'));
 diff --git a/node_modules/highlight.js/lib/languages/dax.js b/node_modules/highlight.js/lib/languages/dax.js
 new file mode 100644
-index 0000000..ca14310
+index 0000000..1042ded
 --- /dev/null
 +++ b/node_modules/highlight.js/lib/languages/dax.js
 @@ -0,0 +1,696 @@
 +function dax(hljs) {
 +    const regex = hljs.regex;
-+    const COMMENT_MODE = hljs.COMMENT('//', '/*');
++    const COMMENT_MODE = hljs.COMMENT('//', '$');
 +    const STRING = {
 +        className: 'string',
 +        variants: [{
