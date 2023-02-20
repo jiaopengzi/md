@@ -156,9 +156,7 @@ class WxRenderer {
                     // 后缀 g 全局 s 多行模式
                     /<span class="hljs-comment">(.*?)<\/span>/gs;
                 const comments = text.match(commentRegex);
-                console.log(
-                    "================================================================="
-                );
+
                 if (comments != null) {
                     comments.forEach((comment) => {
                         // console.log(comment);
@@ -227,19 +225,32 @@ class WxRenderer {
             //     }
             //     if (status) {
             //         let ref = addFootnote(title || text, href);
-            //         return `<span ${getStyles("link")}>${text}<sup>[${ref}]</sup></span>`;
+            //         return `<span ${getStyles("hljs-link")}>${text}<sup>[${ref}]</sup></span>`;
             //     }
-            //     return `<span ${getStyles("link")}>${text}</span>`;
+            //     return `<span ${getStyles("hljs-link")}>${text}</span>`;
             // };
 
-            //
             // =================================================================修改链接显示方式
             // 由于微信公众号好里面不允许外链，外链不能用 a 标签 转换为文本加样式 连接需要单独写出来。
-            renderer.link = (href) => {
-                if (href.startsWith("http")) {
+            renderer.link = (href, title, text) => {
+                // console.log(href);
+                // console.log(title);
+                // console.log(text);
+                // console.log("============================================================");
+
+                if (href.startsWith("https://mp.weixin.qq.com")) {
+                    return `<a href="${href}" title="${title || text}" ${getStyles(
+                "wx_link"
+              )}>${text}</a>`;
+                }
+
+                if (href === text) {
                     return `<span class="hljs-link">${href}</span>`;
                 }
+
+                return `<span class="hljs-link-text">${text}</span><span class="hljs-link">(${href})</span>`;
             };
+
             // =================================================================修改链接显示方式
             renderer.strong = (text) =>
                 `<strong ${getStyles("strong")}>${text}</strong>`;

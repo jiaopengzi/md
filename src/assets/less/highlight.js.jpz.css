@@ -30,8 +30,15 @@ code.hljs {
 .hljs-link {
     color: #569cd6;
     /* text-decoration: underline; */
-    font-size: 14px;
+    font-size: 12px;
     font-style: italic;
+}
+
+.hljs-link-text {
+    /* color: #569cd6; */
+    /* text-decoration: underline; */
+    font-size: 14px;
+    /* font-weight: bold; */
 }
 
 .hljs-built_in,
