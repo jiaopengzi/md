@@ -174,6 +174,29 @@ class WxRenderer {
                     });
                 }
                 // =================================================================处理多行注释
+                // =================================================================处理多行文本串
+                const strRegex =
+                    // 后缀 g 全局 s 多行模式
+                    /<span class="hljs-string">(.*?)<\/span>/gs;
+                const strs = text.match(strRegex);
+
+                if (strs != null) {
+                    strs.forEach((str) => {
+                        // console.log(comment);
+                        const newStr = str
+                            .replace(
+                                /\r\n/g,
+                                '</span></code><code><span class="hljs-string">'
+                            )
+                            .replace(
+                                /\n/g,
+                                '</span></code><code><span class="hljs-string">'
+                            );
+                        // console.log(newComment);
+                        text = text.replace(str, newStr);
+                    });
+                }
+                // =================================================================处理多行文本串
                 text = text
                     .replace(/\r\n/g, "</code><code>")
                     .replace(/\n/g, "</code><code>")
