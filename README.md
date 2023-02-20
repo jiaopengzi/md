@@ -133,3 +133,49 @@ npx patch-package highlight.js
 
 
 
+dax 语言 css 颜色参考
+
+```css
+.Keyword {
+    /* 关键字 公式背景色为：FFFFFE*/
+    color: #0000FF;
+    background-color: #FFFFFE
+}
+
+.Function {
+    /* 关键字 */
+    color: #3165BB
+}
+
+.Variable {
+    /* 变量 */
+    color: #009999
+}
+
+.Comment {
+    /* 注释 */
+    color: #5F9742
+}
+
+.StringLiteral {
+    /* 双引号字符串 */
+    color: #A31515
+}
+
+.Parenthesis {
+    /* 圆括号 */
+    color: #390000
+}
+
+.Number {
+    /* 数字 */
+    color: #09885A
+}
+
+.String2 {
+    /* 函数内部 */
+    color: #001080
+}
+
+```
+
