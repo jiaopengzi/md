@@ -153,7 +153,7 @@ export default {
         link: {
             color: `#569cd6`,
             "text-decoration": `none`,
-            "font-size": `14px`,
+            "font-size": `12px`,
             "font-style": `italic`,
         },
 
@@ -200,4 +200,4 @@ export default {
             "font-size": `0.8em`,
         },
     },
-};
+}

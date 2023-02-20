@@ -4,9 +4,9 @@
 
 ## 一、致谢
 
->感谢开源项目： **[md](https://gitee.com/Doocs/md)**  **[wechat-format](https://github.com/lyricat/wechat-format)**
+>感谢开源项目： [md](https://gitee.com/Doocs/md)  [wechat-format](https://github.com/lyricat/wechat-format)
 >
->感谢 WordPress 插件 **[Mine云点播](https://www.zwtt8.com/)** 作者  [mine27](https://www.zwtt8.com/) 的指导。
+>感谢 WordPress 插件 [Mine云点播](https://www.zwtt8.com/) 作者  [mine27](https://www.zwtt8.com/) 的指导。
 
 
 
