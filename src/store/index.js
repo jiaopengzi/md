@@ -22,7 +22,7 @@ const state = {
     currentColor: ``,
     citeStatus: false,
     nightMode: false,
-    codeTheme: config.codeThemeOption[2].value,
+    codeTheme: config.codeThemeOption[0].value,
     isMacCodeBlock: true,
 }
 const mutations = {
@@ -71,7 +71,7 @@ const mutations = {
         state.currentSize =
             localStorage.getItem(`size`) || config.sizeOption[2].value
         state.codeTheme =
-            localStorage.getItem(`codeTheme`) || config.codeThemeOption[2].value
+            localStorage.getItem(`codeTheme`) || config.codeThemeOption[0].value
         state.citeStatus = localStorage.getItem(`citeStatus`) === `true`
         state.nightMode = localStorage.getItem(`nightMode`) === `true`
         state.isMacCodeBlock = !(localStorage.getItem(`isMacCodeBlock`) === `false`)

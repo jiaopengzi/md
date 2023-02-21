@@ -190,7 +190,7 @@ export default {
       selectFont: ``,
       selectSize: ``,
       selectColor: ``,
-      selectCodeTheme: config.codeThemeOption[2].value,
+      selectCodeTheme: config.codeThemeOption[0].value,
       form: {
         dialogVisible: false,
         title: ``,
@@ -394,7 +394,7 @@ export default {
       this.fontChanged(this.config.builtinFonts[0].value)
       this.colorChanged(this.config.colorOption[0].value)
       this.sizeChanged(this.config.sizeOption[2].value)
-      this.codeThemeChanged(this.config.codeThemeOption[2].value)
+      this.codeThemeChanged(this.config.codeThemeOption[0].value)
       this.$emit(`cssChanged`)
       this.selectFont = this.currentFont
       this.selectSize = this.currentSize
