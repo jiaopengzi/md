@@ -18,7 +18,7 @@ function getConfig(useDefault, platform) {
 
     // choose random token from access_token list
     const tokenIndex = Math.floor(Math.random() * accessTokenList.length)
-    const accessToken = accessTokenList[tokenIndex].replace(`doocsmd`, ``)
+    const accessToken = accessTokenList[tokenIndex].replace(`jpzmd`, ``)
 
     // choose random repo from repo list
     const repoIndex = Math.floor(Math.random() * repoList.length)

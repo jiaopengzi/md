@@ -121,13 +121,13 @@
           <el-dropdown-item class="padding-left-3" @click.native="customStyle">
             自定义 CSS
           </el-dropdown-item>
-          <el-dropdown-item divided @click.native="codeBlockChanged">
+          <!-- <el-dropdown-item divided @click.native="codeBlockChanged">
             <i
               class="el-icon-check"
               :style="{ opacity: isMacCodeBlock ? 1 : 0 }"
             ></i>
             Mac 代码块
-          </el-dropdown-item>
+          </el-dropdown-item> -->
           <el-dropdown-item
             divided
             class="padding-left-3"

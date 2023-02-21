@@ -127,20 +127,20 @@
           <el-form-item label="AccessKey ID" :required="true">
             <el-input
               v-model.trim="formAliOSS.accessKeyId"
-              placeholder="如：LTAI4GdoocsmdoxUf13ylbaNHk"
+              placeholder="如：LTAI4GjpzmdoxUf13ylbaNHk"
             ></el-input>
           </el-form-item>
           <el-form-item label="AccessKey Secret" :required="true">
             <el-input
               v-model.trim="formAliOSS.accessKeySecret"
               show-password
-              placeholder="如：cc1d0c142doocs0902bd2d7md4b14da6ylbabc46"
+              placeholder="如：cc1d0c142jpz0902bd2d7md4b14da6ylbabc46"
             ></el-input>
           </el-form-item>
           <el-form-item label="Bucket" :required="true">
             <el-input
               v-model.trim="formAliOSS.bucket"
-              placeholder="如：doocs"
+              placeholder="如：jpz"
             ></el-input>
           </el-form-item>
           <el-form-item label="Bucket 所在区域" :required="true">
@@ -184,20 +184,20 @@
           <el-form-item label="SecretId" :required="true">
             <el-input
               v-model.trim="formTxCOS.secretId"
-              placeholder="如：AKIDnQp1w3DOOCSs8F5MDp9tdoocsmdUPonW3"
+              placeholder="如：AKIDnQp1w3jpzs8F5MDp9tjpzmdUPonW3"
             ></el-input>
           </el-form-item>
           <el-form-item label="SecretKey" :required="true">
             <el-input
               v-model.trim="formTxCOS.secretKey"
               show-password
-              placeholder="如：ukLmdtEJ9271f3DOocsMDsCXdS3YlbW0"
+              placeholder="如：ukLmdtEJ9271f3jpzMDsCXdS3YlbW0"
             ></el-input>
           </el-form-item>
           <el-form-item label="Bucket" :required="true">
             <el-input
               v-model.trim="formTxCOS.bucket"
-              placeholder="如：doocs-3212520134"
+              placeholder="如：jpz-3212520134"
             ></el-input>
           </el-form-item>
           <el-form-item label="Bucket 所在区域" :required="true">
@@ -241,14 +241,14 @@
           <el-form-item label="AccessKey" :required="true">
             <el-input
               v-model.trim="formQiniu.accessKey"
-              placeholder="如：6DD3VaLJ_SQgOdoocsyTV_YWaDmdnL2n8EGx7kG"
+              placeholder="如：6DD3VaLJ_SQgOjpzyTV_YWaDmdnL2n8EGx7kG"
             ></el-input>
           </el-form-item>
           <el-form-item label="SecretKey" :required="true">
             <el-input
               v-model.trim="formQiniu.secretKey"
               show-password
-              placeholder="如：qgZa5qrvDOOcsmdKStD1oCjZ9nB7MDvJUs_34SIm"
+              placeholder="如：qgZa5qrvjpzmdKStD1oCjZ9nB7MDvJUs_34SIm"
             ></el-input>
           </el-form-item>
           <el-form-item label="Bucket" :required="true">
@@ -319,7 +319,7 @@
           <el-form-item label="Bucket" :required="true">
             <el-input
               v-model.trim="minioOSS.bucket"
-              placeholder="如：doocs"
+              placeholder="如：jpz"
             ></el-input>
           </el-form-item>
           <el-form-item label="AccessKey" :required="true">
@@ -369,7 +369,7 @@
             </el-input>
             <el-link
               type="primary"
-              href="https://github.com/doocs/md#自定义上传逻辑"
+              href="https://github.com/jpz/md#自定义上传逻辑"
               target="_blank"
               >参数详情？
             </el-link>

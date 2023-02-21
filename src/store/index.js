@@ -155,34 +155,34 @@ const mutations = {
             output += state.wxRenderer.buildAddition()
         }
 
-        if (state.isMacCodeBlock) {
-            output += `
-        <style>
-          .hljs.code__pre::before {
-            position: initial;
-            padding: initial;
-            content: '';
-            display: block;
-            height: 25px;
-            background-color: transparent;
-            background-image: url("https://doocs.oss-cn-shenzhen.aliyuncs.com/img/123.svg");
-            background-position: 14px 10px;
-            background-repeat: no-repeat;
-            background-size: 40px;
-          }
+        //     if (state.isMacCodeBlock) {
+        //         output += `
+        //     <style>
+        //       .hljs.code__pre::before {
+        //         position: initial;
+        //         padding: initial;
+        //         content: '';
+        //         display: block;
+        //         height: 25px;
+        //         background-color: transparent;
+        //         background-image: url("https://doocs.oss-cn-shenzhen.aliyuncs.com/img/123.svg");
+        //         background-position: 14px 10px;
+        //         background-repeat: no-repeat;
+        //         background-size: 40px;
+        //       }
 
-          .hljs.code__pre {
-            padding: 0!important;
-          }
+        //       .hljs.code__pre {
+        //         padding: 0!important;
+        //       }
 
-          .hljs.code__pre code {
-            display: -webkit-box;
-            padding: 0.5em 1em 1em;
-            overflow-x: auto;
-          }
-        </style>
-      `
-        }
+        //       .hljs.code__pre code {
+        //         display: -webkit-box;
+        //         padding: 0.5em 1em 1em;
+        //         overflow-x: auto;
+        //       }
+        //     </style>
+        //   `
+        //     }
         state.output = output
     },
 }
