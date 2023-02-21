@@ -2,6 +2,7 @@
     "name": "md",
     "version": "1.5.9",
     "private": false,
+    "homepage": "https://jiaopengzi.github.io/md",
     "scripts": {
         "prepare": "husky install",
         "lint": "vue-cli-service lint src && vue-cli-service lint mm",
@@ -11,7 +12,9 @@
         "build": "vue-cli-service build",
         "build-cli": "npm run build && npx shx rm -rf md-cli/dist && npx shx rm -rf dist/**/*.map && npx shx cp -r dist md-cli/ && cd md-cli && npm pack",
         "mm": "npx mockm --cwd=mm",
-        "postinstall": "patch-package"
+        "postinstall": "patch-package",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "@vue/shared": "^3.2.37",
@@ -55,6 +58,7 @@
         "eslint": "^6.8.0",
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-vue": "^6.2.2",
+        "gh-pages": "^5.0.0",
         "husky": "^7.0.4",
         "jest": "^27.4.7",
         "less": "^4.1.2",
